@@ -107,3 +107,10 @@ body {
 #themeToggle{
   color:var(--text);
 }
+.footer{
+  background: var(--bg-offset);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 2rem;
+  color:var(--text);
+}
