@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,56 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/sections.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav">
             <div class="logo">John Doe</div>
-            <button class="mobile-menu" aria-label="Toggle menu">☰</button>
+            <button class="mobile-menu" aria-label="Toggle menu"><i class='bx bx-menu'></i></button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <button class="theme-toggle" aria-label="Toggle theme"><i class='bx bx-sun'></i></button>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="container">
+                <div class="container">
+                    <div class="hero-content">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400"
+                alt="Profile" class="profile-img">
+                </div>
+            <h1>sumangal's</h1>
+            <p>Full Stack Developer</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sumangal-s-7b0b3b1b1/" class="social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/sumangal-s" class="social-icon"><i class='bx bxl-github'></i></a>
+                <a href="https://twitter.com/sumangal_s" class="social-icon"><i class='bx bxl-twitter'></i></a>
+
+            </div>
+            <a href="/resume.pdf" class="btn btn-primary">Download Resume</a>
+
             <h1>Full Stack Developer</h1>
             <p>Passionate about creating beautiful and functional web applications</p>
         </div>
     </section>
-
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400" alt="Profile" class="profile-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400"
+                    alt="Profile" class="profile-img">
                 <div class="about-text">
-                    <p>Hi! I'm a full-stack developer with 5 years of experience building web applications. I specialize in creating intuitive user interfaces and scalable backend solutions.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical blog posts.</p>
+                    <p>Hi! I'm a full-stack developer with 5 years of experience building web applications. I specialize
+                        in creating intuitive user interfaces and scalable backend solutions.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source
+                        projects, or sharing my knowledge through technical blog posts.</p>
                 </div>
             </div>
         </div>
@@ -74,7 +94,8 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&h=500" alt="Project 1">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&h=500"
+                        alt="Project 1">
                     <h3>E-commerce Platform</h3>
                     <p>A full-stack e-commerce solution with shopping cart and payment integration.</p>
                     <div class="project-links">
@@ -83,7 +104,8 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&h=500" alt="Project 2">
+                    <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&h=500"
+                        alt="Project 2">
                     <h3>Task Manager</h3>
                     <p>A collaborative task management tool with real-time updates.</p>
                     <div class="project-links">
@@ -102,7 +124,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <h3>Email</h3>
-                        <a href="mailto:john@example.com">john@example.com</a>
+                        <a href="mailto:sumangalkaran44@gmail.com">sumangalkaran44@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <h3>Phone</h3>
@@ -113,14 +135,14 @@
                         <p>San Francisco, CA</p>
                     </div>
                 </div>
-                <a href="/resume.pdf" class="btn btn-primary">Download Resume</a>
+                <!-- <a href="/resume.pdf" class="btn btn-primary">Download Resume</a> -->
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 John Doe. All rights reserved.</p>
+            <p>&copy; 2024 sumangal karan. All rights reserved.</p>
         </div>
     </footer>
 
@@ -128,4 +150,5 @@
     <script src="js/navigation.js"></script>
     <script src="js/scroll.js"></script>
 </body>
+
 </html>

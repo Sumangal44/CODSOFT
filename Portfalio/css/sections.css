@@ -6,7 +6,8 @@
     background: var(--bg-color);
     color: white;
     padding: 6rem 0;
-    color:var(--text-color); ;
+    color: var(--text-color);
+    ;
 }
 
 .hero h1 {
@@ -18,6 +19,29 @@
     max-width: 600px;
     margin: 0 auto;
     opacity: 0.9;
+}
+
+.hero a {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+
+    i {
+        font-size: 1.5rem;
+    }
+}
+
+.btn-primary {
+    margin-bottom: 2rem;
+}
+
+.hero a:hover {
+    background: var(--primary-color);
 }
 
 section {
@@ -42,13 +66,21 @@ section h2 {
     max-width: 1000px;
     margin: 0 auto;
 }
+.hero-content {
+    display: flex;
+    gap: clamp(2rem, 5vw, 4rem);
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 .profile-img {
     width: clamp(200px, 30vw, 300px);
     height: clamp(200px, 30vw, 300px);
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
@@ -60,13 +92,15 @@ section h2 {
     font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
-.skills-grid, .projects-grid {
+.skills-grid,
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: clamp(1rem, 3vw, 2rem);
 }
 
-.skill-card, .project-card {
+.skill-card,
+.project-card {
     background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 1rem;
@@ -74,9 +108,10 @@ section h2 {
     height: 100%;
 }
 
-.skill-card:hover, .project-card:hover {
+.skill-card:hover,
+.project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .skill-card h3 {
@@ -124,12 +159,21 @@ section h2 {
     margin-bottom: 3rem;
 }
 
+.contact-info h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
 .contact-item {
     text-align: center;
     padding: 2rem;
     background-color: var(--card-bg);
     border-radius: 1rem;
     transition: transform 0.3s ease;
+
+    a {
+        color: var(--text-color);
+    }
 }
 
 .contact-item:hover {
@@ -162,7 +206,7 @@ section h2 {
     .project-links {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
     }

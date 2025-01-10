@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    .calculator {
+      width: 100%;
+      max-width: 400px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .display {
+      background-color: #333;
+      color: #fff;
+      font-size: 2rem;
+      padding: 20px;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .button {
+      padding: 20px;
+      font-size: 1.2rem;
+      border: 1px solid #ddd;
+      text-align: center;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ececec;
+    }
+
+    .button.operator {
+      background-color: #ff5722;
+      color: #fff;
+    }
+
+    .button.operator:hover {
+      background-color: #e64a19;
+    }
+
+    .button.equal {
+      background-color: #4caf50;
+      color: #fff;
+      grid-column: span 2;
+    }
+
+    .button.equal:hover {
+      background-color: #388e3c;
+    }
+
+    @media (max-width: 480px) {
+      .display {
+        font-size: 1.5rem;
+        padding: 15px;
+      }
+
+      .button {
+        padding: 15px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <div class="button" onclick="clearDisplay()">C</div>
+      <div class="button" onclick="appendValue('(')">(</div>
+      <div class="button" onclick="appendValue(')')">)</div>
+      <div class="button operator" onclick="appendValue('/')">÷</div>
+      <div class="button" onclick="appendValue('7')">7</div>
+      <div class="button" onclick="appendValue('8')">8</div>
+      <div class="button" onclick="appendValue('9')">9</div>
+      <div class="button operator" onclick="appendValue('*')">×</div>
+      <div class="button" onclick="appendValue('4')">4</div>
+      <div class="button" onclick="appendValue('5')">5</div>
+      <div class="button" onclick="appendValue('6')">6</div>
+      <div class="button operator" onclick="appendValue('-')">−</div>
+      <div class="button" onclick="appendValue('1')">1</div>
+      <div class="button" onclick="appendValue('2')">2</div>
+      <div class="button" onclick="appendValue('3')">3</div>
+      <div class="button operator" onclick="appendValue('+')">+</div>
+      <div class="button" onclick="appendValue('0')">0</div>
+      <div class="button" onclick="appendValue('.')">.</div>
+      <div class="button equal" onclick="calculate()">=</div>
+    </div>
+  </div>
+
+  <script>
+    const display = document.getElementById('display');
+
+    function clearDisplay() {
+      display.textContent = '0';
+    }
+
+    function appendValue(value) {
+      if (display.textContent === '0') {
+        display.textContent = value;
+      } else {
+        display.textContent += value;
+      }
+    }
+
+    function calculate() {
+      try {
+        display.textContent = eval(display.textContent.replace('×', '*').replace('÷', '/'));
+      } catch {
+        display.textContent = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -96,7 +96,22 @@
     }
 
     .mobile-menu {
+        
+        padding-left: 14rem;
+        padding-right: 2rem;
         display: block;
+        i{
+            color: var(--text-color);
+            transition: color 0.3s;
+            font-size: 1.5rem;
+        }
+    }
+    .theme-toggle{
+        padding-left: 0;
+    }
+    .logo {
+        font-size: 1rem;
+        text-align: center;
     }
 }
 
