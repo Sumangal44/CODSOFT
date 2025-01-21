@@ -1,0 +1,130 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #4a90e2;
+    --header-text: #ffffff;
+    --quote-bg: #f0f0f0;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --header-bg: #1a1a1a;
+    --header-text: #4a90e2;
+    --quote-bg: #4a4a4a;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  nav {
+    background-color: var(--header-bg);
+    padding: 0.5rem;
+    text-align: right;
+  }
+  
+  .theme-toggle {
+    background-color: var(--text-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .portrait {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  .theme-toggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    z-index: 2;
+}
+
+  h1,
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    padding-left: 1.5rem;
+  }
+  
+  blockquote {
+    background-color: var(--quote-bg);
+    border-left: 5px solid var(--header-bg);
+    padding: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      padding: 1rem;
+    }
+  
+    main {
+      padding: 1rem;
+    }
+  
+    .portrait {
+      max-width: 200px;
+    }
+  }
+  
+  

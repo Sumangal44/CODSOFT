@@ -7,11 +7,11 @@ function initNavigation() {
     });
 
     // Close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    for (const link of document.querySelectorAll('.nav-links a')) {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
         });
-    });
+    }
 }
 
 initNavigation();
